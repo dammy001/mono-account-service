@@ -1,7 +1,6 @@
 import { Controller, Post, Body, Get, Req } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { LoginDto } from './dto/login.dto';
-import { RegisterDto } from './dto/register.dto';
+import { LoginDto, RegisterDto } from './dto/index.dto';
 import { Request } from 'express';
 import { SkipAuth } from '../../decorators/public-route.decorator';
 

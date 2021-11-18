@@ -11,6 +11,8 @@ async function bootstrap() {
     defaultVersion: '1',
   });
 
+  app.enableCors();
+
   await app.listen(6000);
 }
 bootstrap();
