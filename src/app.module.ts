@@ -8,10 +8,15 @@ import { AccountModule } from './api/account/account.module';
 import { UsersModule } from './api/users/users.module';
 import { APP_GUARD } from '@nestjs/core';
 import { JwtAuthGuard } from './guards/auth/jwt-auth.guard';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot(typeOrmConfig),
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: ['.env'],
+    }),
     AuthModule,
     AccountModule,
     UsersModule,
