@@ -14,7 +14,7 @@ RUN pnpm build
 # CMD ["yarn", "start:prod"]
 
 # production stage
-FROM nginx:1.15.7-alpine as production-stage
+FROM nginx:1.21.4-alpine as production-stage
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d
