@@ -3,7 +3,7 @@ import { HttpException, HttpStatus } from '@nestjs/common';
 export class UserExceptionException extends HttpException {
   constructor(
     public message: string,
-    public code: number = HttpStatus.I_AM_A_TEAPOT,
+    public code: number = HttpStatus.BAD_REQUEST,
   ) {
     super(message, code);
   }

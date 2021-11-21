@@ -29,11 +29,9 @@ export class AuthService {
     throw new UnauthorizedException();
   }
 
-  async createToken(
-    user: UserI,
-  ): Promise<{ access_token: string; user: UserI }> {
+  async createToken(user: UserI): Promise<{ token: string; user: UserI }> {
     return {
-      access_token: this.jwtService.sign({ email: user.email, id: user.id }),
+      token: this.jwtService.sign({ email: user.email, id: user.id }),
       user,
     };
   }

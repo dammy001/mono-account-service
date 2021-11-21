@@ -1,8 +1,4 @@
-import { AccountI } from 'src/interfaces/Account';
-
-export const jwtConstants = {
-  secret: 'damilare', //should be put in enviromental variable,
-};
+import { AccountI, UserI } from 'src/interfaces';
 
 export const accounts: AccountI[] = [
   {
@@ -35,7 +31,7 @@ export const accounts: AccountI[] = [
   },
 ];
 
-export const users = [
+export const users: UserI[] = [
   {
     id: 1,
     first_name: 'damilare',
