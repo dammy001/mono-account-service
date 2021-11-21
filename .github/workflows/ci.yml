@@ -27,14 +27,14 @@ jobs:
     - name: Copy repository
       uses: actions/checkout@v2
       
+    - name: Install pnpm
+      run: npm i -g pnpm
+      
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        
-    - name: Install pnpm
-      run: npm i -g pnpm
+        cache: 'pnpm'
       
     - name: Install dependencies
       run: pnpm install
