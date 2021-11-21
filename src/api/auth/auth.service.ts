@@ -1,9 +1,14 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import {
+  Injectable,
+  InternalServerErrorException,
+  UnauthorizedException,
+} from '@nestjs/common';
 import { LoginDto } from './dto/login.dto';
 import { RegisterDto } from './dto/register.dto';
 import { UsersService } from '../users/users.service';
 import { JwtService } from '@nestjs/jwt';
-import { UserI } from '../../interfaces/User';
+import { User } from 'src/models/user.entity';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class AuthService {
@@ -17,19 +22,30 @@ export class AuthService {
     return this.createToken(user);
   }
 
-  register(user: RegisterDto) {
-    return user;
+  async register(user: RegisterDto): Promise<any> {
+    const hashedPassword = await bcrypt.hash(user.password, 10);
+    try {
+      const registerUser = await this.usersService.createUser({
+        ...user,
+        password: hashedPassword,
+      });
+      return this.createToken(registerUser);
+    } catch (err) {
+      throw new InternalServerErrorException();
+    }
   }
 
-  async validateUser(email: string, password: string): Promise<UserI | null> {
+  async validateUser(email: string, password: string): Promise<User | null> {
     const user = await this.usersService.findUser(email);
-    if (user && user.password === password) {
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (user && isMatch) {
       return user;
     }
-    throw new UnauthorizedException();
+    throw new UnauthorizedException('User Not Found');
   }
 
-  async createToken(user: UserI): Promise<{ token: string; user: UserI }> {
+  async createToken(user: User): Promise<{ token: string; user: User }> {
     return {
       token: this.jwtService.sign({ email: user.email, id: user.id }),
       user,

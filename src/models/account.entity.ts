@@ -1,12 +1,12 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
-import { User } from '../users/user.entity';
+import { User } from './user.entity';
 
 @Entity()
 export class Account {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('uuid')
   id: number;
 
-  @Column()
+  @Column({ unique: true })
   accountNumber: number;
 
   @Column()
@@ -21,17 +21,11 @@ export class Account {
   @Column({ default: true })
   isActive: boolean;
 
-  @Column()
-  linkedAt: Date | string | undefined | null;
+  @Column('datetime')
+  linkedAt: string;
 
-  @Column()
-  unlinkedAt: Date | string | undefined | null;
-
-  @Column()
-  createdAt: Date;
-
-  @Column()
-  updatedAt: Date;
+  @Column('datetime')
+  unlinkedAt: string;
 
   @ManyToOne(() => User, (user) => user.id)
   user: User;
