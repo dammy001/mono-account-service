@@ -42,8 +42,8 @@ jobs:
     - name: Lint code
       run: pnpm lint
       
-    - name: Run tests and coverage
-      run: pnpm test:cov
+#     - name: Run tests and coverage
+#       run: pnpm test:cov
 
     - name: Build 
       run: pnpm build --if-present
