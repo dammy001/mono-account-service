@@ -1,7 +1,8 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { User } from '../users/user.entity';
 
 @Entity()
-export class User {
+export class Account {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -9,11 +10,29 @@ export class User {
   accountNumber: number;
 
   @Column()
-  lastName: string;
+  accountName: string;
 
   @Column()
-  email: string;
+  balance: number;
 
   @Column()
-  password: string;
+  logo: string;
+
+  @Column({ default: true })
+  isActive: boolean;
+
+  @Column()
+  linkedAt: Date | string | undefined | null;
+
+  @Column()
+  unlinkedAt: Date | string | undefined | null;
+
+  @Column()
+  createdAt: Date;
+
+  @Column()
+  updatedAt: Date;
+
+  @ManyToOne(() => User, (user) => user.id)
+  user: User;
 }
