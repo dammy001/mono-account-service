@@ -24,16 +24,12 @@ export class AuthService {
   }
 
   async register(user: RegisterDto): Promise<any> {
-    const hashedPassword = await bcrypt.hash(user.password, 10);
-    try {
-      const registerUser = await this.usersService.createUser({
-        ...user,
-        password: hashedPassword,
-      });
-      return this.createToken(registerUser);
-    } catch (err) {
-      throw new InternalServerErrorException();
-    }
+    const registerUser = await this.usersService.createUser({
+      ...user,
+      password: await bcrypt.hash(user.password, 10),
+    });
+
+    return this.createToken(registerUser);
   }
 
   async validateUser(email: string, password: string): Promise<User | null> {
@@ -49,7 +45,10 @@ export class AuthService {
         HttpStatus.BAD_REQUEST,
       );
     } catch (err) {
-      throw new InternalServerErrorException();
+      console.log(err);
+      throw new InternalServerErrorException(
+        'Oops! Something went wrong on the server',
+      );
     }
   }
 
