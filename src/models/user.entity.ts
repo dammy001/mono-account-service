@@ -1,5 +1,14 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToMany,
+  CreateDateColumn,
+  UpdateDateColumn,
+  DeleteDateColumn,
+} from 'typeorm';
 import { Account } from './account.entity';
+import { Exclude } from 'class-transformer';
 
 @Entity()
 export class User {
@@ -16,8 +25,19 @@ export class User {
   email: string;
 
   @Column()
+  @Exclude()
   password: string;
 
+  @CreateDateColumn()
+  createdAt?: Date;
+
+  @UpdateDateColumn()
+  updatedAt?: Date;
+
+  @Exclude()
+  @DeleteDateColumn()
+  deletedAt?: Date;
+
   @OneToMany(() => Account, (account) => account.user)
-  accounts?: Account[];
+  accounts?: Promise<Account[]>;
 }

@@ -8,6 +8,7 @@ import { UsersModule } from './api/users/users.module';
 import { APP_GUARD } from '@nestjs/core';
 import { JwtAuthGuard } from './guards/auth/jwt-auth.guard';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ScheduleModule } from '@nestjs/schedule';
 
 @Module({
   imports: [
@@ -40,6 +41,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
       cache: true,
       expandVariables: true,
     }),
+    ScheduleModule.forRoot(),
     AuthModule,
     AccountModule,
     UsersModule,

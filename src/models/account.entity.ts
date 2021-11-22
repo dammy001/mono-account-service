@@ -1,32 +1,62 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { Exclude } from 'class-transformer';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  ManyToOne,
+  CreateDateColumn,
+  UpdateDateColumn,
+  Index,
+  DeleteDateColumn,
+  OneToMany,
+} from 'typeorm';
+import { Transaction } from './transaction.entity';
 import { User } from './user.entity';
 
 @Entity()
+@Index(['accountNo', 'bankName', 'balance'])
 export class Account {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id?: number;
 
   @Column({ unique: true })
-  accountNumber: number;
+  accountNo: string;
+
+  @Column({ nullable: true })
+  accountName?: string | null;
 
   @Column()
-  accountName: string;
+  bankName?: string;
 
   @Column()
-  balance: number;
+  balance?: number;
 
-  @Column()
-  logo: string;
+  @Column({ nullable: true })
+  logo?: string | null;
 
   @Column({ default: true })
-  isActive: boolean;
+  isActive?: boolean;
 
-  @Column('datetime')
-  linkedAt: string;
+  @Column({ type: 'datetime', nullable: true })
+  linkedAt?: Date | string | null;
 
-  @Column('datetime')
-  unlinkedAt: string;
+  @Column({ type: 'datetime', nullable: true })
+  unlinkedAt?: Date | string | null;
 
-  @ManyToOne(() => User, (user) => user.id)
-  user: User;
+  @CreateDateColumn({ default: () => 'CURRENT_TIMESTAMP(6)' })
+  createdAt?: Date;
+
+  @UpdateDateColumn({ default: () => 'CURRENT_TIMESTAMP(6)' })
+  updatedAt?: Date;
+
+  @Exclude()
+  @DeleteDateColumn()
+  deletedAt?: Date;
+
+  @Index()
+  @ManyToOne(() => User, (user: User) => user)
+  user?: Promise<User>;
+
+  @OneToMany(() => Transaction, (transaction) => transaction.account)
+  transactions?: Promise<Transaction[]>;
 }

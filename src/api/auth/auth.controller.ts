@@ -1,10 +1,19 @@
-import { Controller, Post, Body, Get, Req } from '@nestjs/common';
+import {
+  Controller,
+  Post,
+  Body,
+  Get,
+  UseInterceptors,
+  ClassSerializerInterceptor,
+} from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { LoginDto, RegisterDto } from './dto/index.dto';
-import { Request } from 'express';
 import { SkipAuth } from '../../decorators/public-route.decorator';
+import { User } from 'src/decorators/user.decorator';
+import { User as UserEntity } from 'src/models/user.entity';
 
 @Controller('auth')
+@UseInterceptors(ClassSerializerInterceptor)
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
@@ -21,7 +30,7 @@ export class AuthController {
   }
 
   @Get('session')
-  getProfile(@Req() req: Request) {
-    return req.user;
+  getProfile(@User() user: UserEntity) {
+    return user;
   }
 }

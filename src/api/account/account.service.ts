@@ -1,20 +1,71 @@
-import { Injectable } from '@nestjs/common';
-import { AccountI } from '../../interfaces/Account';
-import { accounts } from '../../constants';
+import {
+  NotFoundException,
+  Injectable,
+  InternalServerErrorException,
+} from '@nestjs/common';
+import { Connection, Repository, UpdateResult } from 'typeorm';
+import { Account } from 'src/models/account.entity';
+import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class AccountService {
-  private readonly accounts: AccountI[] = accounts;
+  constructor(
+    @InjectRepository(Account)
+    private accountRepository: Repository<Account>,
+    private connection: Connection,
+  ) {}
 
-  createAccount() {
-    return 'create account';
+  async linkAccount(user: any, account: Account): Promise<Account> {
+    const queryRunner = this.connection.createQueryRunner();
+
+    await queryRunner.connect();
+    await queryRunner.startTransaction();
+    try {
+      const createAccount = this.accountRepository.create({
+        ...account,
+        user,
+        accountName: 'damilare anjorin',
+        linkedAt: new Date(),
+        balance: 500000,
+      });
+      await queryRunner.manager.save(createAccount);
+
+      await queryRunner.commitTransaction();
+
+      return createAccount;
+    } catch (err) {
+      throw new InternalServerErrorException();
+    } finally {
+      await queryRunner.release();
+    }
   }
 
-  async getAccount(id: string | number): Promise<AccountI> {
-    return this.accounts.find((account: AccountI) => account.id === id);
+  async getLinkedAccounts(user: any): Promise<Account[]> {
+    return await this.accountRepository.find({
+      where: { user: user, isActive: true },
+    });
   }
 
-  async unlinkAccount(account: string | number) {
+  async getAccount(id: string | number): Promise<Account | undefined> {
+    const account = await this.accountRepository.findOne(id);
+    if (!account) {
+      throw new NotFoundException('Account not Found');
+    }
     return account;
+  }
+
+  async unlinkAccount(id: string | number): Promise<UpdateResult> {
+    const account = await this.getAccount(id);
+    return await this.connection
+      .createQueryBuilder()
+      .update(Account)
+      .set({ unlinkedAt: new Date(), isActive: false })
+      .where('id = :id', { id: account.id })
+      .execute();
+  }
+
+  async deleteAccount(id: string | number): Promise<void> {
+    const account = await this.getAccount(id);
+    await this.accountRepository.softDelete(account);
   }
 }
