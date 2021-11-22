@@ -1,9 +1,4 @@
-import {
-  HttpException,
-  HttpStatus,
-  Injectable,
-  InternalServerErrorException,
-} from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { LoginDto } from './dto/login.dto';
 import { RegisterDto } from './dto/register.dto';
 import { UsersService } from '../users/users.service';
@@ -39,23 +34,24 @@ export class AuthService {
   }
 
   async validateUser(email: string, password: string): Promise<User | null> {
-    try {
-      const user = await this.usersService.findUser(email);
-      const isMatch = await bcrypt.compare(password, user.password);
-
-      if (user && isMatch) {
-        return user;
-      }
-      throw new HttpException(
-        'Wrong credentials provided',
-        HttpStatus.BAD_REQUEST,
-      );
-    } catch (err) {
-      console.log(err);
-      throw new InternalServerErrorException(
-        'Oops! Something went wrong on the server',
-      );
+    const user = await this.usersService.findUser(email);
+    if (!user) {
+      this.userNotFound();
     }
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (!isMatch) {
+      this.userNotFound();
+    }
+
+    return user;
+  }
+
+  userNotFound() {
+    throw new HttpException(
+      'Wrong credentials provided',
+      HttpStatus.BAD_REQUEST,
+    );
   }
 
   async createToken(user: User): Promise<{ token: string; user: User }> {
