@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from 'src/models/user.entity';
@@ -11,10 +11,14 @@ export class UsersService {
   ) {}
 
   async createUser(user: User): Promise<User | undefined> {
-    const createUser = this.usersRepository.create(user);
-    await this.usersRepository.save(createUser);
+    try {
+      const createUser = this.usersRepository.create(user);
+      await this.usersRepository.save(createUser);
 
-    return createUser;
+      return createUser;
+    } catch (err) {
+      throw new InternalServerErrorException();
+    }
   }
 
   async findUser(email: string): Promise<User | undefined> {

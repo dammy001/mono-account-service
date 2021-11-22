@@ -47,3 +47,9 @@ export const users: UserI[] = [
     password: 'password',
   },
 ];
+
+export const generateRandomData = (length = 20) => {
+  for (let i: number; i <= length; i++) {
+    return {};
+  }
+};

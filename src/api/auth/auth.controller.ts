@@ -11,6 +11,7 @@ import { LoginDto, RegisterDto } from './dto/index.dto';
 import { SkipAuth } from '../../decorators/public-route.decorator';
 import { User } from 'src/decorators/user.decorator';
 import { User as UserEntity } from 'src/models/user.entity';
+import { Account } from 'src/models/account.entity';
 
 @Controller('auth')
 @UseInterceptors(ClassSerializerInterceptor)
@@ -30,7 +31,13 @@ export class AuthController {
   }
 
   @Get('session')
-  getProfile(@User() user: UserEntity) {
-    return user;
+  async getProfile(@User() user: UserEntity): Promise<{
+    user: UserEntity;
+    accounts: Account[];
+  }> {
+    return {
+      user,
+      accounts: await user.accounts,
+    };
   }
 }

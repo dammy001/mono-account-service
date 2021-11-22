@@ -9,6 +9,7 @@ import {
 import { Controller, Get, Post } from '@nestjs/common';
 import { User } from 'src/decorators/user.decorator';
 import { Account } from 'src/models/account.entity';
+import { Transaction } from 'src/models/transaction.entity';
 import { User as UserEntity } from 'src/models/user.entity';
 import { UpdateResult } from 'typeorm';
 import { AccountService } from './account.service';
@@ -20,11 +21,11 @@ export class AccountController {
   constructor(private readonly accountService: AccountService) {}
 
   @Post()
-  linkAccount(
+  async linkAccount(
     @User('id') id: UserEntity,
     @Body() createAccountDto: CreateAccountDto,
   ): Promise<Account> {
-    return this.accountService.linkAccount(id, createAccountDto);
+    return await this.accountService.linkAccount(id, createAccountDto);
   }
 
   @Get(':account')
@@ -37,20 +38,25 @@ export class AccountController {
     return this.accountService.getLinkedAccounts(user);
   }
 
-  @Get('transactions/:account')
-  getTransactions(@Param('account') account: string | number) {
-    return `account transactions ${account}`;
+  @Get(':account/transactions')
+  async getTransactions(
+    @Param('account') account: string | number,
+  ): Promise<Transaction[]> {
+    const accountModel = await this.accountService.getAccount(account);
+    return await accountModel.transactions;
   }
 
   @Put('unlink/:account')
-  unlinkAccount(
+  async unlinkAccount(
     @Param('account') account: string | number,
   ): Promise<UpdateResult> {
-    return this.accountService.unlinkAccount(account);
+    return await this.accountService.unlinkAccount(account);
   }
 
   @Delete(':account')
-  deleteAccount(@Param('account') account: string | number): Promise<void> {
-    return this.accountService.deleteAccount(account);
+  async deleteAccount(
+    @Param('account') account: string | number,
+  ): Promise<void> {
+    return await this.accountService.deleteAccount(account);
   }
 }
