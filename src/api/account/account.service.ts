@@ -16,8 +16,9 @@ export class AccountService {
   ) {}
 
   async linkAccount(user: any, account: Account): Promise<Account> {
-    const queryRunner = this.connection.createQueryRunner();
+    await this.isAccountNoExist(account.accountNo);
 
+    const queryRunner = this.connection.createQueryRunner();
     await queryRunner.connect();
     await queryRunner.startTransaction();
     try {
@@ -44,6 +45,20 @@ export class AccountService {
     return await this.accountRepository.find({
       where: { user: user, isActive: true },
     });
+  }
+
+  async isAccountNoExist(accountNo: number | string): Promise<Account> {
+    const account = await this.connection
+      .createQueryBuilder()
+      .select('account')
+      .from(Account, 'account')
+      .where('account.accountNo = :accountNo', { accountNo })
+      .getOne();
+
+    if (!account) {
+      throw new NotFoundException('Account not Found');
+    }
+    return account;
   }
 
   async getAccount(id: string | number): Promise<Account | undefined> {
