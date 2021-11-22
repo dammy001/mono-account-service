@@ -2,6 +2,8 @@ import {
   NotFoundException,
   Injectable,
   InternalServerErrorException,
+  HttpException,
+  HttpStatus,
 } from '@nestjs/common';
 import { Connection, Repository, UpdateResult } from 'typeorm';
 import { Account } from 'src/models/account.entity';
@@ -50,13 +52,13 @@ export class AccountService {
   async isAccountNoExist(accountNo: number | string): Promise<Account> {
     const account = await this.connection
       .createQueryBuilder()
-      .select('account')
+      .select('account.accountNo')
       .from(Account, 'account')
       .where('account.accountNo = :accountNo', { accountNo })
       .getOne();
 
-    if (!account) {
-      throw new NotFoundException('Account not Found');
+    if (account) {
+      throw new HttpException('Account Already Exists', HttpStatus.BAD_REQUEST);
     }
     return account;
   }
