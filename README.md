@@ -28,16 +28,17 @@ $ pnpm run start:prod
 ```
 
 ## Configuration
+```bash
 JWT_SECRET="secret"
 EXPIRES="2d"
 
-// This project makes use of mysql
+# This project makes use of mysql
 DB_HOST=
 DB_PORT=
 DB_USERNAME=
 DB_PASSWORD=
 DB_DATABASE=
-
+```
 
 ## Test
 
