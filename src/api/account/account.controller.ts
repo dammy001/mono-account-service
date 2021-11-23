@@ -5,15 +5,17 @@ import {
   UseInterceptors,
   ClassSerializerInterceptor,
   Put,
+  HttpStatus,
+  Res,
 } from '@nestjs/common';
 import { Controller, Get, Post } from '@nestjs/common';
 import { User } from 'src/decorators/user.decorator';
 import { Account } from 'src/models/account.entity';
 import { Transaction } from 'src/models/transaction.entity';
 import { User as UserEntity } from 'src/models/user.entity';
-import { UpdateResult } from 'typeorm';
 import { AccountService } from './account.service';
 import { CreateAccountDto } from './dto/create-account.dto';
+import { Response } from 'express';
 
 @Controller('account')
 @UseInterceptors(ClassSerializerInterceptor)
@@ -46,17 +48,31 @@ export class AccountController {
     return await accountModel.transactions;
   }
 
-  @Put('unlink/:account')
+  @Put(':account/unlink')
   async unlinkAccount(
     @Param('account') account: string | number,
-  ): Promise<UpdateResult> {
-    return await this.accountService.unlinkAccount(account);
+    @Res() res: Response,
+  ): Promise<void> {
+    const unlink = await this.accountService.unlinkAccount(account);
+    if (unlink.affected) {
+      res.status(HttpStatus.ACCEPTED).send({
+        status: true,
+        message: 'Account Unlinked Successfully',
+      });
+    }
   }
 
   @Delete(':account')
   async deleteAccount(
     @Param('account') account: string | number,
+    @Res() res: Response,
   ): Promise<void> {
-    return await this.accountService.deleteAccount(account);
+    const deleted = await this.accountService.deleteAccount(account);
+    if (deleted.affected) {
+      res.status(HttpStatus.ACCEPTED).send({
+        status: true,
+        message: 'Account Deleted',
+      });
+    }
   }
 }

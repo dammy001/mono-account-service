@@ -8,12 +8,17 @@ import {
 import { Connection, Repository, UpdateResult } from 'typeorm';
 import { Account } from 'src/models/account.entity';
 import { InjectRepository } from '@nestjs/typeorm';
+import { generateRandomTransaction } from 'src/constants';
+import { Transaction } from 'src/models/transaction.entity';
+import { TransactionService } from '../transactions/transactions.service';
 
 @Injectable()
 export class AccountService {
+  private randomTransactions = generateRandomTransaction(20);
   constructor(
     @InjectRepository(Account)
     private accountRepository: Repository<Account>,
+    private transactionService: TransactionService,
     private connection: Connection,
   ) {}
 
@@ -31,12 +36,19 @@ export class AccountService {
         linkedAt: new Date(),
         balance: 500000,
       });
+
       await queryRunner.manager.save(createAccount);
+
+      this.randomTransactions.forEach((transaction: Transaction) => {
+        this.transactionService.create(createAccount, transaction);
+      });
 
       await queryRunner.commitTransaction();
 
       return createAccount;
     } catch (err) {
+      console.log(err);
+      await queryRunner.rollbackTransaction();
       throw new InternalServerErrorException();
     } finally {
       await queryRunner.release();
@@ -81,8 +93,7 @@ export class AccountService {
       .execute();
   }
 
-  async deleteAccount(id: string | number): Promise<void> {
-    const account = await this.getAccount(id);
-    await this.accountRepository.softDelete(account);
+  async deleteAccount(id: string | number): Promise<UpdateResult> {
+    return await this.accountRepository.softDelete(id);
   }
 }

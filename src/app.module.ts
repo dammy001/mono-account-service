@@ -9,6 +9,7 @@ import { APP_GUARD } from '@nestjs/core';
 import { JwtAuthGuard } from './guards/auth/jwt-auth.guard';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ScheduleModule } from '@nestjs/schedule';
+import { TransactionsModule } from './api/transactions/transactions.module';
 
 @Module({
   imports: [
@@ -45,6 +46,7 @@ import { ScheduleModule } from '@nestjs/schedule';
     AuthModule,
     AccountModule,
     UsersModule,
+    TransactionsModule,
   ],
   controllers: [AppController],
   providers: [

@@ -1,22 +1,10 @@
-import { Exclude } from 'class-transformer';
-import {
-  Entity,
-  Column,
-  PrimaryGeneratedColumn,
-  ManyToOne,
-  CreateDateColumn,
-  UpdateDateColumn,
-  Index,
-  DeleteDateColumn,
-} from 'typeorm';
+import { Entity, Column, ManyToOne, Index } from 'typeorm';
 import { Account } from './account.entity';
+import { Base } from './base.entity';
 
 @Entity()
 @Index(['status', 'type', 'transactionDate'])
-export class Transaction {
-  @PrimaryGeneratedColumn('uuid')
-  id?: number;
-
+export class Transaction extends Base {
   @Column({ nullable: true })
   description?: string | null;
 
@@ -35,18 +23,9 @@ export class Transaction {
   @Column({ type: 'timestamp', nullable: true })
   transactionDate?: Date | null;
 
-  @CreateDateColumn({ default: () => 'CURRENT_TIMESTAMP(6)' })
-  createdAt?: Date;
-
-  @Exclude()
-  @UpdateDateColumn({ default: () => 'CURRENT_TIMESTAMP(6)' })
-  updatedAt?: Date;
-
-  @Exclude()
-  @DeleteDateColumn()
-  deletedAt?: Date;
-
   @Index()
-  @ManyToOne(() => Account, (account: Account) => account)
+  @ManyToOne(() => Account, (account: Account) => account, {
+    onDelete: 'CASCADE',
+  })
   account?: Promise<Account>;
 }

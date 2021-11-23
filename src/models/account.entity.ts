@@ -1,24 +1,11 @@
-import { Exclude } from 'class-transformer';
-import {
-  Entity,
-  Column,
-  PrimaryGeneratedColumn,
-  ManyToOne,
-  CreateDateColumn,
-  UpdateDateColumn,
-  Index,
-  DeleteDateColumn,
-  OneToMany,
-} from 'typeorm';
+import { Entity, Column, ManyToOne, Index, OneToMany } from 'typeorm';
+import { Base } from './base.entity';
 import { Transaction } from './transaction.entity';
 import { User } from './user.entity';
 
 @Entity()
 @Index(['accountNo', 'bankName', 'balance'])
-export class Account {
-  @PrimaryGeneratedColumn('uuid')
-  id?: number;
-
+export class Account extends Base {
   @Column({ unique: true })
   accountNo: string;
 
@@ -43,20 +30,12 @@ export class Account {
   @Column({ type: 'datetime', nullable: true })
   unlinkedAt?: Date | string | null;
 
-  @CreateDateColumn({ default: () => 'CURRENT_TIMESTAMP(6)' })
-  createdAt?: Date;
-
-  @UpdateDateColumn({ default: () => 'CURRENT_TIMESTAMP(6)' })
-  updatedAt?: Date;
-
-  @Exclude()
-  @DeleteDateColumn()
-  deletedAt?: Date;
-
   @Index()
   @ManyToOne(() => User, (user: User) => user)
   user?: Promise<User>;
 
-  @OneToMany(() => Transaction, (transaction) => transaction.account)
+  @OneToMany(() => Transaction, (transaction) => transaction.account, {
+    onDelete: 'CASCADE',
+  })
   transactions?: Promise<Transaction[]>;
 }

@@ -1,4 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import { AccountI, UserI } from 'src/interfaces';
+const faker = require('faker');
+import { Transaction } from 'src/models/transaction.entity';
 
 export const accounts: AccountI[] = [
   {
@@ -48,8 +51,16 @@ export const users: UserI[] = [
   },
 ];
 
-export const generateRandomData = (length = 20) => {
-  for (let i: number; i <= length; i++) {
-    return {};
+export const generateRandomTransaction = (min = 0, max = 20): Transaction[] => {
+  const results = [];
+  for (let i = 0; i < Math.floor(Math.random() * (max - min + 1)) + min; i++) {
+    results.push({
+      description: faker.random.words(),
+      amount: parseInt(faker.finance.amount(5000, 100000)),
+      type: faker.random.arrayElements(['dr', 'cr']),
+      transactionDate: faker.date.recent(),
+      status: faker.random.arrayElements(['pending', 'success', 'failed']),
+    });
   }
+  return results;
 };

@@ -1,20 +1,10 @@
-import {
-  Entity,
-  Column,
-  PrimaryGeneratedColumn,
-  OneToMany,
-  CreateDateColumn,
-  UpdateDateColumn,
-  DeleteDateColumn,
-} from 'typeorm';
+import { Entity, Column, OneToMany } from 'typeorm';
 import { Account } from './account.entity';
 import { Exclude } from 'class-transformer';
+import { Base } from './base.entity';
 
 @Entity()
-export class User {
-  @PrimaryGeneratedColumn('uuid')
-  id?: number;
-
+export class User extends Base {
   @Column()
   firstName: string;
 
@@ -27,16 +17,6 @@ export class User {
   @Column()
   @Exclude()
   password: string;
-
-  @CreateDateColumn()
-  createdAt?: Date;
-
-  @UpdateDateColumn()
-  updatedAt?: Date;
-
-  @Exclude()
-  @DeleteDateColumn()
-  deletedAt?: Date;
 
   @OneToMany(() => Account, (account) => account.user)
   accounts?: Promise<Account[]>;

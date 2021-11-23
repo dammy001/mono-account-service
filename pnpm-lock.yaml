@@ -16,6 +16,7 @@ specifiers:
   '@types/bcrypt': 5.0.0
   '@types/cron': ^1.7.3
   '@types/express': 4.17.13
+  '@types/faker': ^5.5.9
   '@types/jest': 27.0.3
   '@types/node': 16.11.7
   '@types/passport-jwt': 3.0.6
@@ -29,6 +30,7 @@ specifiers:
   eslint: 7.32.0
   eslint-config-prettier: 8.3.0
   eslint-plugin-prettier: 4.0.0
+  faker: ^5.5.3
   husky: 7.0.4
   jest: 27.3.1
   mysql2: 2.3.3
@@ -60,6 +62,7 @@ dependencies:
   bcrypt: 5.0.1
   class-transformer: 0.4.0
   class-validator: 0.13.2
+  faker: 5.5.3
   mysql2: 2.3.3
   passport: 0.5.0
   passport-jwt: 4.0.0
@@ -76,6 +79,7 @@ devDependencies:
   '@types/bcrypt': 5.0.0
   '@types/cron': 1.7.3
   '@types/express': 4.17.13
+  '@types/faker': 5.5.9
   '@types/jest': 27.0.3
   '@types/node': 16.11.7
   '@types/passport-jwt': 3.0.6
@@ -1223,6 +1227,10 @@ packages:
       '@types/express-serve-static-core': 4.17.25
       '@types/qs': 6.9.7
       '@types/serve-static': 1.13.10
+    dev: true
+
+  /@types/faker/5.5.9:
+    resolution: {integrity: sha512-uCx6mP3UY5SIO14XlspxsGjgaemrxpssJI0Ol+GfhxtcKpv9pgRZYsS4eeKeHVLje6Qtc8lGszuBI461+gVZBA==}
     dev: true
 
   /@types/graceful-fs/4.1.5:
@@ -2806,6 +2814,10 @@ packages:
       iconv-lite: 0.4.24
       tmp: 0.0.33
     dev: true
+
+  /faker/5.5.3:
+    resolution: {integrity: sha512-wLTv2a28wjUyWkbnX7u/ABZBkUkIF2fCd73V6P2oFqEGEktDfzWx4UxrSqtPRw0xPRAcjeAOIiJWqZm3pP4u3g==}
+    dev: false
 
   /fast-deep-equal/3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
