@@ -9,14 +9,14 @@ specifiers:
   '@nestjs/mapped-types': '*'
   '@nestjs/passport': 8.0.1
   '@nestjs/platform-express': 8.2.3
-  '@nestjs/schedule': ^1.0.2
+  '@nestjs/schedule': 1.0.2
   '@nestjs/schematics': 8.0.5
   '@nestjs/testing': 8.2.3
   '@nestjs/typeorm': 8.0.2
   '@types/bcrypt': 5.0.0
-  '@types/cron': ^1.7.3
+  '@types/cron': 1.7.3
   '@types/express': 4.17.13
-  '@types/faker': ^5.5.9
+  '@types/faker': 5.5.9
   '@types/jest': 27.0.3
   '@types/node': 16.11.7
   '@types/passport-jwt': 3.0.6
@@ -30,7 +30,7 @@ specifiers:
   eslint: 7.32.0
   eslint-config-prettier: 8.3.0
   eslint-plugin-prettier: 4.0.0
-  faker: ^5.5.3
+  faker: 5.5.3
   husky: 7.0.4
   jest: 27.3.1
   mysql2: 2.3.3
