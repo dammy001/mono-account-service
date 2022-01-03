@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@nestjs/cli': 8.1.6
   '@nestjs/common': 8.2.4
-  '@nestjs/config': 1.1.5
+  '@nestjs/config': 1.1.6
   '@nestjs/core': 8.2.4
   '@nestjs/jwt': 8.0.0
   '@nestjs/mapped-types': '*'
@@ -51,7 +51,7 @@ specifiers:
 
 dependencies:
   '@nestjs/common': 8.2.4_ab122ef2881ad3103a0a4ece3a4e1880
-  '@nestjs/config': 1.1.5_947eef0805e788651766a5ee39d6841e
+  '@nestjs/config': 1.1.6_947eef0805e788651766a5ee39d6841e
   '@nestjs/core': 8.2.4_377811f682cc86e04c85c183a4c9aaaa
   '@nestjs/jwt': 8.0.0_@nestjs+common@8.2.4
   '@nestjs/mapped-types': 1.0.0_1f21807b554b988a9d09258923dc67a4
@@ -882,8 +882,8 @@ packages:
       - debug
     dev: false
 
-  /@nestjs/config/1.1.5_947eef0805e788651766a5ee39d6841e:
-    resolution: {integrity: sha512-xSpp/6TIHFhicuuwRu2fFGmClzN+YXtpVSLGX3LT9iAwtNDcccX3qVDOX1BLdFdBbqZTqT3KezsT+iE/czd/xg==}
+  /@nestjs/config/1.1.6_947eef0805e788651766a5ee39d6841e:
+    resolution: {integrity: sha512-HYizKt6Dr6gcZl8FmZbTfQxP0MG8oXMh+gVFT0XCwYDAq26BOKyhPsIxrKsryicVeKViRgetCUhlJY9EqaekZA==}
     peerDependencies:
       '@nestjs/common': ^7.0.0 || ^8.0.0
       reflect-metadata: ^0.1.13
@@ -892,9 +892,7 @@ packages:
       '@nestjs/common': 8.2.4_ab122ef2881ad3103a0a4ece3a4e1880
       dotenv: 10.0.0
       dotenv-expand: 5.1.0
-      lodash.get: 4.4.2
-      lodash.has: 4.5.2
-      lodash.set: 4.3.2
+      lodash: 4.17.21
       reflect-metadata: 0.1.13
       rxjs: 7.5.1
       uuid: 8.3.2
@@ -4150,14 +4148,6 @@ packages:
       p-locate: 4.1.0
     dev: true
 
-  /lodash.get/4.4.2:
-    resolution: {integrity: sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=}
-    dev: false
-
-  /lodash.has/4.5.2:
-    resolution: {integrity: sha1-0Z9NwQlQWMzL4rDN9O4P5Ko3yGI=}
-    dev: false
-
   /lodash.includes/4.3.0:
     resolution: {integrity: sha1-YLuYqHy5I8aMoeUTJUgzFISfVT8=}
     dev: false
@@ -4194,13 +4184,8 @@ packages:
     resolution: {integrity: sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=}
     dev: false
 
-  /lodash.set/4.3.2:
-    resolution: {integrity: sha1-2HV7HagH3eJIFrDWqEvqGnYjCyM=}
-    dev: false
-
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /log-symbols/4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
