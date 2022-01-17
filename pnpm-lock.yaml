@@ -12,7 +12,7 @@ specifiers:
   '@nestjs/schedule': 1.0.2
   '@nestjs/schematics': 8.0.5
   '@nestjs/testing': 8.2.5
-  '@nestjs/typeorm': 8.0.2
+  '@nestjs/typeorm': 8.0.3
   '@types/bcrypt': 5.0.0
   '@types/cron': 1.7.3
   '@types/express': 4.17.13
@@ -58,7 +58,7 @@ dependencies:
   '@nestjs/passport': 8.1.0_fad574eebf217792c1a96edf566992e9
   '@nestjs/platform-express': 8.2.5_dd9ef2e1e23f087665d46fe53bbbed58
   '@nestjs/schedule': 1.0.2_8b618827ffa1784f2e7b042a97d87b6c
-  '@nestjs/typeorm': 8.0.2_fa8dda60a9697e2f31bd24497506afa8
+  '@nestjs/typeorm': 8.0.3_fa8dda60a9697e2f31bd24497506afa8
   bcrypt: 5.0.1
   class-transformer: 0.5.1
   class-validator: 0.13.2
@@ -1042,8 +1042,8 @@ packages:
       tslib: 2.3.1
     dev: true
 
-  /@nestjs/typeorm/8.0.2_fa8dda60a9697e2f31bd24497506afa8:
-    resolution: {integrity: sha512-UHn4IsRkzm22eNDir/uI+x8gmgo66EO7SxWfVOiPpeLSdrTfZHKYz6q/P9KRgYbwXs8TrywVdIbJhp+4C0tzjQ==}
+  /@nestjs/typeorm/8.0.3_fa8dda60a9697e2f31bd24497506afa8:
+    resolution: {integrity: sha512-tf9rTXP6LeFInkwd+tktQhtLRsKp4RRYImprqT8gcHcJDx+xMP1IygnXELOKwF5vo2/mnhrGtBlRQ/iiS6170g==}
     peerDependencies:
       '@nestjs/common': ^8.0.0
       '@nestjs/core': ^8.0.0
