@@ -46,7 +46,7 @@ specifiers:
   ts-loader: 9.2.6
   ts-node: 10.5.0
   tsconfig-paths: 3.12.0
-  typeorm: 0.2.42
+  typeorm: 0.2.44
   typescript: 4.5.5
 
 dependencies:
@@ -58,7 +58,7 @@ dependencies:
   '@nestjs/passport': 8.1.0_469354efd308cbdee43194b5fd6a2c15
   '@nestjs/platform-express': 8.2.6_732a54a2558f64827b8cc4f9baac4f1f
   '@nestjs/schedule': 1.0.2_d86dd164971a98d71cc003a4f36ff106
-  '@nestjs/typeorm': 8.0.3_0ed56d7c30e0c3f9bdc199c031fb06c1
+  '@nestjs/typeorm': 8.0.3_9907e1579d4fb92e958c4cc0efe23334
   bcrypt: 5.0.1
   class-transformer: 0.5.1
   class-validator: 0.13.2
@@ -70,7 +70,7 @@ dependencies:
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
   rxjs: 7.5.3
-  typeorm: 0.2.42_mysql2@2.3.3
+  typeorm: 0.2.44_mysql2@2.3.3
 
 devDependencies:
   '@nestjs/cli': 8.2.0_eslint@8.9.0
@@ -1042,7 +1042,7 @@ packages:
       tslib: 2.3.1
     dev: true
 
-  /@nestjs/typeorm/8.0.3_0ed56d7c30e0c3f9bdc199c031fb06c1:
+  /@nestjs/typeorm/8.0.3_9907e1579d4fb92e958c4cc0efe23334:
     resolution: {integrity: sha512-tf9rTXP6LeFInkwd+tktQhtLRsKp4RRYImprqT8gcHcJDx+xMP1IygnXELOKwF5vo2/mnhrGtBlRQ/iiS6170g==}
     peerDependencies:
       '@nestjs/common': ^8.0.0
@@ -1055,7 +1055,7 @@ packages:
       '@nestjs/core': 8.2.6_9aae0b4740cbeedc88665835c72de2c2
       reflect-metadata: 0.1.13
       rxjs: 7.5.3
-      typeorm: 0.2.42_mysql2@2.3.3
+      typeorm: 0.2.44_mysql2@2.3.3
       uuid: 8.3.2
     dev: false
 
@@ -5613,8 +5613,8 @@ packages:
     resolution: {integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=}
     dev: false
 
-  /typeorm/0.2.42_mysql2@2.3.3:
-    resolution: {integrity: sha512-vuw1zOhwQFbjy/I3gV2oEzQZrRQ2MlkSx3sARqwOPWTF3Za0k0a1m6arMigPZ/l6TtsQsFzFQ2ozZtK6h64IxQ==}
+  /typeorm/0.2.44_mysql2@2.3.3:
+    resolution: {integrity: sha512-yFyb9Ts73vGaS/O06TvLpzvT5U/ngO31GeciNc0eoH7P1QcG8kVZdOy9FHJqkTeDmIljMRgWjbYUoMw53ZY7Xw==}
     hasBin: true
     peerDependencies:
       '@sap/hana-client': ^2.11.14
