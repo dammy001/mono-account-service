@@ -46,7 +46,7 @@ specifiers:
   ts-loader: 9.2.8
   ts-node: 10.7.0
   tsconfig-paths: 3.14.1
-  typeorm: 0.3.4
+  typeorm: 0.3.6
   typescript: 4.6.2
 
 dependencies:
@@ -58,7 +58,7 @@ dependencies:
   '@nestjs/passport': 8.2.1_9e25dd30011c9f67d234e31a708ff266
   '@nestjs/platform-express': 8.4.4_a78378ec5f3cecc3c353ed91b578f3e6
   '@nestjs/schedule': 1.0.2_8a3f4045e53a03a04c90c8adfa35dfce
-  '@nestjs/typeorm': 8.0.3_e2e968517bc09c3e50df826cc9016229
+  '@nestjs/typeorm': 8.0.3_97945d5ae085fe2f98e0791ef8c1d768
   bcrypt: 5.0.1
   class-transformer: 0.5.1
   class-validator: 0.13.2
@@ -70,7 +70,7 @@ dependencies:
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
   rxjs: 7.5.5
-  typeorm: 0.3.4_mysql2@2.3.3+ts-node@10.7.0
+  typeorm: 0.3.6_mysql2@2.3.3+ts-node@10.7.0
 
 devDependencies:
   '@nestjs/cli': 8.2.5
@@ -1054,7 +1054,7 @@ packages:
       tslib: 2.3.1
     dev: true
 
-  /@nestjs/typeorm/8.0.3_e2e968517bc09c3e50df826cc9016229:
+  /@nestjs/typeorm/8.0.3_97945d5ae085fe2f98e0791ef8c1d768:
     resolution: {integrity: sha512-tf9rTXP6LeFInkwd+tktQhtLRsKp4RRYImprqT8gcHcJDx+xMP1IygnXELOKwF5vo2/mnhrGtBlRQ/iiS6170g==}
     peerDependencies:
       '@nestjs/common': ^8.0.0
@@ -1067,7 +1067,7 @@ packages:
       '@nestjs/core': 8.4.4_b63c269346792a9d57cfab86d23050d2
       reflect-metadata: 0.1.13
       rxjs: 7.5.5
-      typeorm: 0.3.4_mysql2@2.3.3+ts-node@10.7.0
+      typeorm: 0.3.6_mysql2@2.3.3+ts-node@10.7.0
       uuid: 8.3.2
     dev: false
 
@@ -5637,11 +5637,12 @@ packages:
     resolution: {integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=}
     dev: false
 
-  /typeorm/0.3.4_mysql2@2.3.3+ts-node@10.7.0:
-    resolution: {integrity: sha512-6v3HH12viDhIQwQDod/B0Plt1o7IYIVDxP7zwatD6fzN+IDdqTTinW/sWNw84Edpbhh2t7XILTaQEqj0NXFP/Q==}
+  /typeorm/0.3.6_mysql2@2.3.3+ts-node@10.7.0:
+    resolution: {integrity: sha512-DRqgfqcelMiGgWSMbBmVoJNFN2nPNA3EeY2gC324ndr2DZoGRTb9ILtp2oGVGnlA+cu5zgQ6it5oqKFNkte7Aw==}
     engines: {node: '>= 12.9.0'}
     hasBin: true
     peerDependencies:
+      '@google-cloud/spanner': ^5.18.0
       '@sap/hana-client': ^2.11.14
       better-sqlite3: ^7.1.2
       hdb-pool: ^0.1.6
@@ -5653,12 +5654,14 @@ packages:
       pg: ^8.5.1
       pg-native: ^3.0.0
       pg-query-stream: ^4.0.0
-      redis: ^3.1.1
+      redis: ^3.1.1 || ^4.0.0
       sql.js: ^1.4.0
       sqlite3: ^5.0.2
       ts-node: ^10.7.0
       typeorm-aurora-data-api-driver: ^2.0.0
     peerDependenciesMeta:
+      '@google-cloud/spanner':
+        optional: true
       '@sap/hana-client':
         optional: true
       better-sqlite3:
