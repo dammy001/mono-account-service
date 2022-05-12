@@ -41,7 +41,7 @@ specifiers:
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
   rxjs: 7.5.5
-  supertest: 6.2.2
+  supertest: 6.2.3
   ts-jest: 27.1.4
   ts-loader: 9.2.8
   ts-node: 10.7.0
@@ -93,7 +93,7 @@ devDependencies:
   husky: 7.0.4
   jest: 27.5.1_ts-node@10.7.0
   prettier: 2.6.2
-  supertest: 6.2.2
+  supertest: 6.2.3
   ts-jest: 27.1.4_883b10c08924430ab30d8420fb0bb054
   ts-loader: 9.2.8_typescript@4.6.2
   ts-node: 10.7.0_a24445202e3e9319ea4c85fee1c57305
@@ -212,7 +212,7 @@ packages:
       '@babel/traverse': 7.17.3
       '@babel/types': 7.17.0
       convert-source-map: 1.8.0
-      debug: 4.3.3
+      debug: 4.3.4
       gensync: 1.0.0-beta.2
       json5: 2.2.0
       semver: 6.3.0
@@ -492,7 +492,7 @@ packages:
       '@babel/helper-split-export-declaration': 7.16.7
       '@babel/parser': 7.17.3
       '@babel/types': 7.17.0
-      debug: 4.3.3
+      debug: 4.3.4
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -527,7 +527,7 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
       ajv: 6.12.6
-      debug: 4.3.3
+      debug: 4.3.4
       espree: 9.3.2
       globals: 13.12.1
       ignore: 5.2.0
@@ -544,7 +544,7 @@ packages:
     engines: {node: '>=10.10.0'}
     dependencies:
       '@humanwhocodes/object-schema': 1.2.1
-      debug: 4.3.3
+      debug: 4.3.4
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -1658,7 +1658,7 @@ packages:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
     dependencies:
-      debug: 4.3.3
+      debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
 
@@ -2387,6 +2387,17 @@ packages:
     dependencies:
       ms: 2.1.2
 
+  /debug/4.3.4:
+    resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
+
   /decimal.js/10.3.1:
     resolution: {integrity: sha512-V0pfhfr8suzyPGOx3nmq4aHqabehUZn6Ch9kyFpV79TGDTWFmHqUqXdabR7QHqxzrYolF4+tVmJhUG4OURg5dQ==}
     dev: true
@@ -2981,7 +2992,7 @@ packages:
       memfs: 3.4.1
       minimatch: 3.1.2
       schema-utils: 3.1.1
-      semver: 7.3.5
+      semver: 7.3.7
       tapable: 2.2.1
       typescript: 4.6.2
       webpack: 5.71.0
@@ -3243,7 +3254,7 @@ packages:
     dependencies:
       '@tootallnate/once': 1.1.2
       agent-base: 6.0.2
-      debug: 4.3.3
+      debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3253,7 +3264,7 @@ packages:
     engines: {node: '>= 6'}
     dependencies:
       agent-base: 6.0.2
-      debug: 4.3.3
+      debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
 
@@ -3487,7 +3498,7 @@ packages:
     resolution: {integrity: sha512-n3s8EwkdFIJCG3BPKBYvskgXGoy88ARzvegkitk60NxRdwltLOTaH7CUiMRXvwYorl0Q712iEjcWB+fK/MrWVw==}
     engines: {node: '>=10'}
     dependencies:
-      debug: 4.3.3
+      debug: 4.3.4
       istanbul-lib-coverage: 3.2.0
       source-map: 0.6.1
     transitivePeerDependencies:
@@ -3902,7 +3913,7 @@ packages:
       jest-util: 27.5.1
       natural-compare: 1.4.0
       pretty-format: 27.5.1
-      semver: 7.3.5
+      semver: 7.3.7
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -5041,6 +5052,14 @@ packages:
     dependencies:
       lru-cache: 6.0.0
 
+  /semver/7.3.7:
+    resolution: {integrity: sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      lru-cache: 6.0.0
+    dev: true
+
   /send/0.17.2:
     resolution: {integrity: sha512-UJYB6wFSJE3G00nEivR5rgWp8c2xXvJ3OPWPhmuteU0IKj8nKbG3DrjiOmLwpnHGYWAVwA69zmTm++YG0Hmwww==}
     engines: {node: '>= 0.8.0'}
@@ -5255,13 +5274,13 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /superagent/7.1.1:
-    resolution: {integrity: sha512-CQ2weSS6M+doIwwYFoMatklhRbx6sVNdB99OEJ5czcP3cng76Ljqus694knFWgOj3RkrtxZqIgpe6vhe0J7QWQ==}
+  /superagent/7.1.3:
+    resolution: {integrity: sha512-WA6et4nAvgBCS73lJvv1D0ssI5uk5Gh+TGN/kNe+B608EtcVs/yzfl+OLXTzDs7tOBDIpvgh/WUs1K2OK1zTeQ==}
     engines: {node: '>=6.4.0 <13 || >=14'}
     dependencies:
       component-emitter: 1.3.0
       cookiejar: 2.1.3
-      debug: 4.3.3
+      debug: 4.3.4
       fast-safe-stringify: 2.1.1
       form-data: 4.0.0
       formidable: 2.0.1
@@ -5269,17 +5288,17 @@ packages:
       mime: 2.6.0
       qs: 6.10.3
       readable-stream: 3.6.0
-      semver: 7.3.5
+      semver: 7.3.7
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /supertest/6.2.2:
-    resolution: {integrity: sha512-wCw9WhAtKJsBvh07RaS+/By91NNE0Wh0DN19/hWPlBOU8tAfOtbZoVSV4xXeoKoxgPx0rx2y+y+8660XtE7jzg==}
+  /supertest/6.2.3:
+    resolution: {integrity: sha512-3GSdMYTMItzsSYjnIcljxMVZKPW1J9kYHZY+7yLfD0wpPwww97GeImZC1oOk0S5+wYl2niJwuFusBJqwLqYM3g==}
     engines: {node: '>=6.0.0'}
     dependencies:
       methods: 1.1.2
-      superagent: 7.1.1
+      superagent: 7.1.3
     transitivePeerDependencies:
       - supports-color
     dev: true
