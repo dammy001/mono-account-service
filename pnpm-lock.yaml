@@ -5,7 +5,7 @@ specifiers:
   '@nestjs/common': 8.4.4
   '@nestjs/config': 2.0.0
   '@nestjs/core': 8.4.4
-  '@nestjs/jwt': 8.0.0
+  '@nestjs/jwt': 8.0.1
   '@nestjs/mapped-types': '*'
   '@nestjs/passport': 8.2.1
   '@nestjs/platform-express': 8.4.4
@@ -53,7 +53,7 @@ dependencies:
   '@nestjs/common': 8.4.4_5199533202e21c7185c9d97f881e2827
   '@nestjs/config': 2.0.0_7670df531e7a1503cdbe395599f41db7
   '@nestjs/core': 8.4.4_b63c269346792a9d57cfab86d23050d2
-  '@nestjs/jwt': 8.0.0_@nestjs+common@8.4.4
+  '@nestjs/jwt': 8.0.1_@nestjs+common@8.4.4
   '@nestjs/mapped-types': 1.0.1_5a485a6776bce4bf38c75aafd7cb3504
   '@nestjs/passport': 8.2.1_9e25dd30011c9f67d234e31a708ff266
   '@nestjs/platform-express': 8.4.4_a78378ec5f3cecc3c353ed91b578f3e6
@@ -938,13 +938,13 @@ packages:
       - encoding
     dev: false
 
-  /@nestjs/jwt/8.0.0_@nestjs+common@8.4.4:
-    resolution: {integrity: sha512-fz2LQgYY2zmuD8S+8UE215anwKyXlnB/1FwJQLVR47clNfMeFMK8WCxmn6xdPhF5JKuV1crO6FVabb1qWzDxqQ==}
+  /@nestjs/jwt/8.0.1_@nestjs+common@8.4.4:
+    resolution: {integrity: sha512-9WGfgngX8aclC/MC+CH35Ooo4iPVKc+7xLXaBV6o4ty8g2uZdPomry7cSdK/e6Lv623O/84WapThnPoAtW/jvA==}
     peerDependencies:
       '@nestjs/common': ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
       '@nestjs/common': 8.4.4_5199533202e21c7185c9d97f881e2827
-      '@types/jsonwebtoken': 8.5.4
+      '@types/jsonwebtoken': 8.5.8
       jsonwebtoken: 8.5.1
     dev: false
 
@@ -1280,17 +1280,10 @@ packages:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
     dev: true
 
-  /@types/jsonwebtoken/8.5.4:
-    resolution: {integrity: sha512-4L8msWK31oXwdtC81RmRBAULd0ShnAHjBuKT9MRQpjP0piNrZdXyTRcKY9/UIfhGeKIT4PvF5amOOUbbT/9Wpg==}
-    dependencies:
-      '@types/node': 16.11.34
-    dev: false
-
   /@types/jsonwebtoken/8.5.8:
     resolution: {integrity: sha512-zm6xBQpFDIDM6o9r6HSgDeIcLy82TKWctCXEPbJJcXb5AKmi5BNNdLXneixK4lplX3PqIVcwLBCGE/kAGnlD4A==}
     dependencies:
       '@types/node': 16.11.34
-    dev: true
 
   /@types/luxon/2.3.2:
     resolution: {integrity: sha512-WOehptuhKIXukSUUkRgGbj2c997Uv/iUgYgII8U7XLJqq9W2oF0kQ6frEznRQbdurioz+L/cdaIm4GutTQfgmA==}
@@ -2031,7 +2024,7 @@ packages:
     dev: true
 
   /buffer-equal-constant-time/1.0.1:
-    resolution: {integrity: sha1-+OcRMvf/5uAaXJaXpMbz5I1cyBk=}
+    resolution: {integrity: sha512-zRpUiDwd/xk6ADqPMATG8vc9VPrkck7T07OIx0gnjmJAnHnTVXNQG3vfvWNuiZIkwu9KrKdA1iJKfsfTVxE6NA==}
     dev: false
 
   /buffer-from/1.1.2:
