@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@nestjs/cli': 8.2.5
   '@nestjs/common': 8.4.4
-  '@nestjs/config': 2.0.0
+  '@nestjs/config': 2.2.0
   '@nestjs/core': 8.4.4
   '@nestjs/jwt': 8.0.1
   '@nestjs/mapped-types': '*'
@@ -17,7 +17,7 @@ specifiers:
   '@types/cron': 2.0.0
   '@types/express': 4.17.13
   '@types/faker': 5.5.9
-  '@types/jest': 27.5.1
+  '@types/jest': 27.5.2
   '@types/node': 16.11.34
   '@types/passport-jwt': 3.0.6
   '@types/passport-local': 1.0.34
@@ -51,7 +51,7 @@ specifiers:
 
 dependencies:
   '@nestjs/common': 8.4.4_5199533202e21c7185c9d97f881e2827
-  '@nestjs/config': 2.0.0_7670df531e7a1503cdbe395599f41db7
+  '@nestjs/config': 2.2.0_7670df531e7a1503cdbe395599f41db7
   '@nestjs/core': 8.4.4_b63c269346792a9d57cfab86d23050d2
   '@nestjs/jwt': 8.0.1_@nestjs+common@8.4.4
   '@nestjs/mapped-types': 1.0.1_5a485a6776bce4bf38c75aafd7cb3504
@@ -80,7 +80,7 @@ devDependencies:
   '@types/cron': 2.0.0
   '@types/express': 4.17.13
   '@types/faker': 5.5.9
-  '@types/jest': 27.5.1
+  '@types/jest': 27.5.2
   '@types/node': 16.11.34
   '@types/passport-jwt': 3.0.6
   '@types/passport-local': 1.0.34
@@ -94,7 +94,7 @@ devDependencies:
   jest: 27.5.1_ts-node@10.7.0
   prettier: 2.6.2
   supertest: 6.2.3
-  ts-jest: 27.1.5_883b10c08924430ab30d8420fb0bb054
+  ts-jest: 27.1.5_1256f7befda9a275ec718809454a39ec
   ts-loader: 9.3.0_typescript@4.6.2
   ts-node: 10.7.0_a04d236a3fabec8907b18231b2a46d4e
   tsconfig-paths: 4.0.0
@@ -886,16 +886,16 @@ packages:
     transitivePeerDependencies:
       - debug
 
-  /@nestjs/config/2.0.0_7670df531e7a1503cdbe395599f41db7:
-    resolution: {integrity: sha512-Hi1k/1S5ogsS5c0OtNm72thiLSngijOaLDFaGI5ZPxNGpF23lctPg6ox3pYIOhXVRX/u+eiUIp71gswH2k8YNw==}
+  /@nestjs/config/2.2.0_7670df531e7a1503cdbe395599f41db7:
+    resolution: {integrity: sha512-78Eg6oMbCy3D/YvqeiGBTOWei1Jwi3f2pSIZcZ1QxY67kYsJzTRTkwRT8Iv30DbK0sGKc1mcloDLD5UXgZAZtg==}
     peerDependencies:
-      '@nestjs/common': ^7.0.0 || ^8.0.0
+      '@nestjs/common': ^7.0.0 || ^8.0.0 || ^9.0.0
       reflect-metadata: ^0.1.13
       rxjs: ^6.0.0 || ^7.2.0
     dependencies:
       '@nestjs/common': 8.4.4_5199533202e21c7185c9d97f881e2827
-      dotenv: 16.0.0
-      dotenv-expand: 8.0.2
+      dotenv: 16.0.1
+      dotenv-expand: 8.0.3
       lodash: 4.17.21
       reflect-metadata: 0.1.13
       rxjs: 7.5.5
@@ -1255,8 +1255,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/27.5.1:
-    resolution: {integrity: sha512-fUy7YRpT+rHXto1YlL+J9rs0uLGyiqVt3ZOTQR+4ROc47yNl8WLdVLgUloBRhOxP1PZvguHl44T3H0wAWxahYQ==}
+  /@types/jest/27.5.2:
+    resolution: {integrity: sha512-mpT8LJJ4CMeeahobofYWIjFo0xonRS/HfxnVEPMPFSQdGUt1uHCnoPT7Zhb+sjDU2wz0oKV0OLUR0WzrHNgfeA==}
     dependencies:
       jest-matcher-utils: 27.5.1
       pretty-format: 27.5.1
@@ -2500,13 +2500,18 @@ packages:
       webidl-conversions: 5.0.0
     dev: true
 
-  /dotenv-expand/8.0.2:
-    resolution: {integrity: sha512-vKKAk+VOzAWOV/dPIeSYqhgC/TQY+6L6Ibkzfsr8xd1stdBsTuGu9asCOXgbYbBeS+f2Y6lqqEuw7riOA+xEUQ==}
+  /dotenv-expand/8.0.3:
+    resolution: {integrity: sha512-SErOMvge0ZUyWd5B0NXMQlDkN+8r+HhVUsxgOO7IoPDOdDRD2JjExpN6y3KnFR66jsJMwSn1pqIivhU5rcJiNg==}
     engines: {node: '>=12'}
     dev: false
 
   /dotenv/16.0.0:
     resolution: {integrity: sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==}
+    engines: {node: '>=12'}
+    dev: false
+
+  /dotenv/16.0.1:
+    resolution: {integrity: sha512-1K6hR6wtk2FviQ4kEiSjFiH5rpzEVi8WW0x96aztHVMhEspNpc4DVOUTEHtEva5VThQ8IaBX1Pe4gSzpVVUsKQ==}
     engines: {node: '>=12'}
     dev: false
 
@@ -5437,7 +5442,7 @@ packages:
     hasBin: true
     dev: true
 
-  /ts-jest/27.1.5_883b10c08924430ab30d8420fb0bb054:
+  /ts-jest/27.1.5_1256f7befda9a275ec718809454a39ec:
     resolution: {integrity: sha512-Xv6jBQPoBEvBq/5i2TeSG9tt/nqkbpcurrEG1b+2yfBrcJelOZF9Ml6dmyMh7bcW9JyFbRYpR5rxROSlBLTZHA==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     hasBin: true
@@ -5458,7 +5463,7 @@ packages:
       esbuild:
         optional: true
     dependencies:
-      '@types/jest': 27.5.1
+      '@types/jest': 27.5.2
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
       jest: 27.5.1_ts-node@10.7.0
