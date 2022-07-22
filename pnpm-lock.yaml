@@ -34,7 +34,7 @@ specifiers:
   husky: 8.0.1
   jest: 27.5.1
   mysql2: 2.3.3
-  passport: 0.5.2
+  passport: 0.6.0
   passport-jwt: 4.0.0
   passport-local: 1.0.0
   prettier: 2.6.2
@@ -55,7 +55,7 @@ dependencies:
   '@nestjs/core': 8.4.4_b63c269346792a9d57cfab86d23050d2
   '@nestjs/jwt': 8.0.1_@nestjs+common@8.4.4
   '@nestjs/mapped-types': 1.0.1_5a485a6776bce4bf38c75aafd7cb3504
-  '@nestjs/passport': 8.2.1_9e25dd30011c9f67d234e31a708ff266
+  '@nestjs/passport': 8.2.1_8ac7d9eb011a1d238f4fec40c498c714
   '@nestjs/platform-express': 8.4.4_a78378ec5f3cecc3c353ed91b578f3e6
   '@nestjs/schedule': 1.1.0_8a3f4045e53a03a04c90c8adfa35dfce
   '@nestjs/typeorm': 8.0.3_97945d5ae085fe2f98e0791ef8c1d768
@@ -64,7 +64,7 @@ dependencies:
   class-validator: 0.13.2
   faker: 5.5.3
   mysql2: 2.3.3
-  passport: 0.5.2
+  passport: 0.6.0
   passport-jwt: 4.0.0
   passport-local: 1.0.0
   reflect-metadata: 0.1.13
@@ -963,14 +963,14 @@ packages:
       reflect-metadata: 0.1.13
     dev: false
 
-  /@nestjs/passport/8.2.1_9e25dd30011c9f67d234e31a708ff266:
+  /@nestjs/passport/8.2.1_8ac7d9eb011a1d238f4fec40c498c714:
     resolution: {integrity: sha512-HXEKMLX1x865+lsJB4srwKHBciDNAhWY1Ha+xbxYRbk7J5leGDoHJAmeqe+Wb3NDn5nkboggLV87t0q2mbYc8w==}
     peerDependencies:
       '@nestjs/common': ^6.0.0 || ^7.0.0 || ^8.0.0
       passport: ^0.4.0 || ^0.5.0
     dependencies:
       '@nestjs/common': 8.4.4_5199533202e21c7185c9d97f881e2827
-      passport: 0.5.2
+      passport: 0.6.0
     dev: false
 
   /@nestjs/platform-express/8.4.4_a78378ec5f3cecc3c353ed91b578f3e6:
@@ -4636,12 +4636,13 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: false
 
-  /passport/0.5.2:
-    resolution: {integrity: sha512-w9n/Ot5I7orGD4y+7V3EFJCQEznE5RxHamUxcqLT2QoJY0f2JdN8GyHonYFvN0Vz+L6lUJfVhrk2aZz2LbuREw==}
+  /passport/0.6.0:
+    resolution: {integrity: sha512-0fe+p3ZnrWRW74fe8+SvCyf4a3Pb2/h7gFkQ8yTJpAO50gDzlfjZUZTO1k5Eg9kUct22OxHLqDZoKUWRHOh9ug==}
     engines: {node: '>= 0.4.0'}
     dependencies:
       passport-strategy: 1.0.0
       pause: 0.0.1
+      utils-merge: 1.0.1
     dev: false
 
   /path-exists/4.0.0:
