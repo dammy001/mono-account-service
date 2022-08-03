@@ -43,7 +43,7 @@ specifiers:
   rxjs: 7.5.5
   supertest: 6.2.3
   ts-jest: 27.1.5
-  ts-loader: 9.3.0
+  ts-loader: 9.3.1
   ts-node: 10.7.0
   tsconfig-paths: 4.0.0
   typeorm: 0.3.7
@@ -95,7 +95,7 @@ devDependencies:
   prettier: 2.6.2
   supertest: 6.2.3
   ts-jest: 27.1.5_883b10c08924430ab30d8420fb0bb054
-  ts-loader: 9.3.0_typescript@4.6.2
+  ts-loader: 9.3.1_typescript@4.6.2
   ts-node: 10.7.0_a04d236a3fabec8907b18231b2a46d4e
   tsconfig-paths: 4.0.0
   typescript: 4.6.2
@@ -5006,14 +5006,6 @@ packages:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
     hasBin: true
 
-  /semver/7.3.5:
-    resolution: {integrity: sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      lru-cache: 6.0.0
-    dev: true
-
   /semver/7.3.7:
     resolution: {integrity: sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==}
     engines: {node: '>=10'}
@@ -5477,8 +5469,8 @@ packages:
       yargs-parser: 20.2.9
     dev: true
 
-  /ts-loader/9.3.0_typescript@4.6.2:
-    resolution: {integrity: sha512-2kLLAdAD+FCKijvGKi9sS0OzoqxLCF3CxHpok7rVgCZ5UldRzH0TkbwG9XECKjBzHsAewntC5oDaI/FwKzEUog==}
+  /ts-loader/9.3.1_typescript@4.6.2:
+    resolution: {integrity: sha512-OkyShkcZTsTwyS3Kt7a4rsT/t2qvEVQuKCTg4LJmpj9fhFR7ukGdZwV6Qq3tRUkqcXtfGpPR7+hFKHCG/0d3Lw==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       typescript: '*'
@@ -5487,7 +5479,7 @@ packages:
       chalk: 4.1.2
       enhanced-resolve: 5.9.2
       micromatch: 4.0.4
-      semver: 7.3.5
+      semver: 7.3.7
       typescript: 4.6.2
     dev: true
 
@@ -5959,7 +5951,7 @@ packages:
     engines: {node: '>=10'}
 
   /yallist/2.1.2:
-    resolution: {integrity: sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=}
+    resolution: {integrity: sha512-ncTzHV7NvsQZkYe1DW7cbDLm0YpzHmZF5r/iyP3ZnQtMiJ+pjzisCiMNI+Sj+xQF5pXhSHxSB3uDbsBTzY/c2A==}
     dev: false
 
   /yallist/4.0.0:
