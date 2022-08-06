@@ -29,7 +29,7 @@ specifiers:
   class-validator: 0.13.2
   eslint: 8.15.0
   eslint-config-prettier: 8.5.0
-  eslint-plugin-prettier: 4.0.0
+  eslint-plugin-prettier: 4.2.1
   faker: 5.5.3
   husky: 8.0.1
   jest: 27.5.1
@@ -89,7 +89,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.32.0_eslint@8.15.0+typescript@4.6.2
   eslint: 8.15.0
   eslint-config-prettier: 8.5.0_eslint@8.15.0
-  eslint-plugin-prettier: 4.0.0_440b30a60bbe5bb6e3ad0057150b2782
+  eslint-plugin-prettier: 4.2.1_440b30a60bbe5bb6e3ad0057150b2782
   husky: 8.0.1
   jest: 27.5.1_ts-node@10.7.0
   prettier: 2.6.2
@@ -2609,9 +2609,9 @@ packages:
       eslint: 8.15.0
     dev: true
 
-  /eslint-plugin-prettier/4.0.0_440b30a60bbe5bb6e3ad0057150b2782:
-    resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
-    engines: {node: '>=6.0.0'}
+  /eslint-plugin-prettier/4.2.1_440b30a60bbe5bb6e3ad0057150b2782:
+    resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
+    engines: {node: '>=12.0.0'}
     peerDependencies:
       eslint: '>=7.28.0'
       eslint-config-prettier: '*'
