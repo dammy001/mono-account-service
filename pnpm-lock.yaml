@@ -46,7 +46,7 @@ specifiers:
   ts-loader: 9.3.1
   ts-node: 10.7.0
   tsconfig-paths: 4.0.0
-  typeorm: 0.3.7
+  typeorm: 0.3.9
   typescript: 4.6.2
 
 dependencies:
@@ -58,7 +58,7 @@ dependencies:
   '@nestjs/passport': 9.0.0_831970cf43b4c9f2f2669630e07dc1ea
   '@nestjs/platform-express': 9.0.11_51e3e64fce4aee1b7c2eef4aa6ba87df
   '@nestjs/schedule': 1.1.0_2d5ef92cc47dcc64ecad64d6d3f04e8a
-  '@nestjs/typeorm': 8.1.4_0ba6df6cf986f1ba846f071cc3b9f6cc
+  '@nestjs/typeorm': 8.1.4_905f484690641611af931567a197ef59
   bcrypt: 5.0.1
   class-transformer: 0.5.1
   class-validator: 0.13.2
@@ -70,7 +70,7 @@ dependencies:
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
   rxjs: 7.5.5
-  typeorm: 0.3.7_mysql2@2.3.3+ts-node@10.7.0
+  typeorm: 0.3.9_mysql2@2.3.3+ts-node@10.7.0
 
 devDependencies:
   '@nestjs/cli': 9.1.1
@@ -1062,7 +1062,7 @@ packages:
       tslib: 2.4.0
     dev: true
 
-  /@nestjs/typeorm/8.1.4_0ba6df6cf986f1ba846f071cc3b9f6cc:
+  /@nestjs/typeorm/8.1.4_905f484690641611af931567a197ef59:
     resolution: {integrity: sha512-hKv0Y9PG7YkHQfjsrNqM1s/VajlT7Mla8gaoblmuLzgMKsOQFsZXSHlXNxXZ8CA4aCPeDUiXtvqc4zocadGiIQ==}
     peerDependencies:
       '@nestjs/common': ^8.0.0
@@ -1075,7 +1075,7 @@ packages:
       '@nestjs/core': 9.0.11_382bd8e23cadbcd4db628b637a6b5079
       reflect-metadata: 0.1.13
       rxjs: 7.5.5
-      typeorm: 0.3.7_mysql2@2.3.3+ts-node@10.7.0
+      typeorm: 0.3.9_mysql2@2.3.3+ts-node@10.7.0
       uuid: 8.3.2
     dev: false
 
@@ -2441,11 +2441,6 @@ packages:
 
   /dotenv-expand/8.0.3:
     resolution: {integrity: sha512-SErOMvge0ZUyWd5B0NXMQlDkN+8r+HhVUsxgOO7IoPDOdDRD2JjExpN6y3KnFR66jsJMwSn1pqIivhU5rcJiNg==}
-    engines: {node: '>=12'}
-    dev: false
-
-  /dotenv/16.0.0:
-    resolution: {integrity: sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==}
     engines: {node: '>=12'}
     dev: false
 
@@ -5527,8 +5522,8 @@ packages:
   /typedarray/0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
 
-  /typeorm/0.3.7_mysql2@2.3.3+ts-node@10.7.0:
-    resolution: {integrity: sha512-MsPJeP6Zuwfe64c++l80+VRqpGEGxf0CkztIEnehQ+CMmQPSHjOnFbFxwBuZ2jiLqZTjLk2ZqQdVF0RmvxNF3Q==}
+  /typeorm/0.3.9_mysql2@2.3.3+ts-node@10.7.0:
+    resolution: {integrity: sha512-xNcE44D4hn74n7pjuMog9hRgep+BiO3IBpjEaQZ8fb56zsDz7xHT1GAeWwmGuuU+4nDEELp2mIqgSCR+zxR7Jw==}
     engines: {node: '>= 12.9.0'}
     hasBin: true
     peerDependencies:
@@ -5592,7 +5587,7 @@ packages:
       cli-highlight: 2.1.11
       date-fns: 2.28.0
       debug: 4.3.4
-      dotenv: 16.0.0
+      dotenv: 16.0.1
       glob: 7.2.0
       js-yaml: 4.1.0
       mkdirp: 1.0.4
@@ -5600,7 +5595,7 @@ packages:
       reflect-metadata: 0.1.13
       sha.js: 2.4.11
       ts-node: 10.7.0_d2550902a8128108b483b6babf83e061
-      tslib: 2.3.1
+      tslib: 2.4.0
       uuid: 8.3.2
       xml2js: 0.4.23
       yargs: 17.3.1
