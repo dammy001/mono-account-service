@@ -15,7 +15,7 @@ specifiers:
   '@nestjs/typeorm': 8.1.4
   '@types/bcrypt': 5.0.0
   '@types/cron': 2.0.0
-  '@types/express': 4.17.13
+  '@types/express': 4.17.14
   '@types/faker': 5.5.9
   '@types/jest': 27.5.2
   '@types/node': 16.11.47
@@ -78,7 +78,7 @@ devDependencies:
   '@nestjs/testing': 9.0.11_cf8c7db7707b7c83689046a1dfe5c5ac
   '@types/bcrypt': 5.0.0
   '@types/cron': 2.0.0
-  '@types/express': 4.17.13
+  '@types/express': 4.17.14
   '@types/faker': 5.5.9
   '@types/jest': 27.5.2
   '@types/node': 16.11.47
@@ -1229,8 +1229,8 @@ packages:
       '@types/range-parser': 1.2.4
     dev: true
 
-  /@types/express/4.17.13:
-    resolution: {integrity: sha512-6bSZTPaTIACxn48l50SR+axgrqm6qXFIxrdAKaG6PaJk3+zuUr35hBlgT7vOmJcum+OEaIBLtHV/qloEAFITeA==}
+  /@types/express/4.17.14:
+    resolution: {integrity: sha512-TEbt+vaPFQ+xpxFLFssxUDXj5cWCxZJjIcB7Yg0k0GMHGtgtQgpvx/MUQUeAkNbA9AAGrwkAsoeItdTgS7FMyg==}
     dependencies:
       '@types/body-parser': 1.19.2
       '@types/express-serve-static-core': 4.17.28
@@ -1298,7 +1298,7 @@ packages:
   /@types/passport-jwt/3.0.6:
     resolution: {integrity: sha512-cmAAMIRTaEwpqxlrZyiEY9kdibk94gP5KTF8AT1Ra4rWNZYHNMreqhKUEeC5WJtuN5SJZjPQmV+XO2P5PlnvNQ==}
     dependencies:
-      '@types/express': 4.17.13
+      '@types/express': 4.17.14
       '@types/jsonwebtoken': 8.5.8
       '@types/passport-strategy': 0.2.35
     dev: true
@@ -1306,7 +1306,7 @@ packages:
   /@types/passport-local/1.0.34:
     resolution: {integrity: sha512-PSc07UdYx+jhadySxxIYWuv6sAnY5e+gesn/5lkPKfBeGuIYn9OPR+AAEDq73VRUh6NBTpvE/iPE62rzZUslog==}
     dependencies:
-      '@types/express': 4.17.13
+      '@types/express': 4.17.14
       '@types/passport': 1.0.7
       '@types/passport-strategy': 0.2.35
     dev: true
@@ -1314,14 +1314,14 @@ packages:
   /@types/passport-strategy/0.2.35:
     resolution: {integrity: sha512-o5D19Jy2XPFoX2rKApykY15et3Apgax00RRLf0RUotPDUsYrQa7x4howLYr9El2mlUApHmCMv5CZ1IXqKFQ2+g==}
     dependencies:
-      '@types/express': 4.17.13
+      '@types/express': 4.17.14
       '@types/passport': 1.0.7
     dev: true
 
   /@types/passport/1.0.7:
     resolution: {integrity: sha512-JtswU8N3kxBYgo+n9of7C97YQBT+AYPP2aBfNGTzABqPAZnK/WOAaKfh3XesUYMZRrXFuoPc2Hv0/G/nQFveHw==}
     dependencies:
-      '@types/express': 4.17.13
+      '@types/express': 4.17.14
     dev: true
 
   /@types/prettier/2.4.4:
