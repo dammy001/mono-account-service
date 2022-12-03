@@ -5,7 +5,7 @@ specifiers:
   '@nestjs/common': 9.0.11
   '@nestjs/config': 2.2.0
   '@nestjs/core': 9.0.11
-  '@nestjs/jwt': 8.0.1
+  '@nestjs/jwt': 9.0.0
   '@nestjs/mapped-types': '*'
   '@nestjs/passport': 9.0.0
   '@nestjs/platform-express': 9.0.11
@@ -53,7 +53,7 @@ dependencies:
   '@nestjs/common': 9.0.11_5199533202e21c7185c9d97f881e2827
   '@nestjs/config': 2.2.0_59de92f9fd864687249b3972c06ca399
   '@nestjs/core': 9.0.11_382bd8e23cadbcd4db628b637a6b5079
-  '@nestjs/jwt': 8.0.1_@nestjs+common@9.0.11
+  '@nestjs/jwt': 9.0.0_@nestjs+common@9.0.11
   '@nestjs/mapped-types': 1.0.1_2fdbab34b37fcd61241c769a15661dba
   '@nestjs/passport': 9.0.0_831970cf43b4c9f2f2669630e07dc1ea
   '@nestjs/platform-express': 9.0.11_51e3e64fce4aee1b7c2eef4aa6ba87df
@@ -978,10 +978,10 @@ packages:
     transitivePeerDependencies:
       - encoding
 
-  /@nestjs/jwt/8.0.1_@nestjs+common@9.0.11:
-    resolution: {integrity: sha512-9WGfgngX8aclC/MC+CH35Ooo4iPVKc+7xLXaBV6o4ty8g2uZdPomry7cSdK/e6Lv623O/84WapThnPoAtW/jvA==}
+  /@nestjs/jwt/9.0.0_@nestjs+common@9.0.11:
+    resolution: {integrity: sha512-ZsXGY/wMYKzEhymw2+dxiwrHTRKIKrGszx6r2EjQqNLypdXMQu0QrujwZJ8k3+XQV4snmuJwwNakQoA2ILfq8w==}
     peerDependencies:
-      '@nestjs/common': ^6.0.0 || ^7.0.0 || ^8.0.0
+      '@nestjs/common': ^8.0.0 || ^9.0.0
     dependencies:
       '@nestjs/common': 9.0.11_5199533202e21c7185c9d97f881e2827
       '@types/jsonwebtoken': 8.5.8
@@ -3926,27 +3926,27 @@ packages:
     dev: true
 
   /lodash.includes/4.3.0:
-    resolution: {integrity: sha1-YLuYqHy5I8aMoeUTJUgzFISfVT8=}
+    resolution: {integrity: sha512-W3Bx6mdkRTGtlJISOvVD/lbqjTlPPUDTMnlXZFnVwi9NKJ6tiAk6LVdlhZMm17VZisqhKcgzpO5Wz91PCt5b0w==}
     dev: false
 
   /lodash.isboolean/3.0.3:
-    resolution: {integrity: sha1-bC4XHbKiV82WgC/UOwGyDV9YcPY=}
+    resolution: {integrity: sha512-Bz5mupy2SVbPHURB98VAcw+aHh4vRV5IPNhILUCsOzRmsTmSQ17jIuqopAentWoehktxGd9e/hbIXq980/1QJg==}
     dev: false
 
   /lodash.isinteger/4.0.4:
-    resolution: {integrity: sha1-YZwK89A/iwTDH1iChAt3sRzWg0M=}
+    resolution: {integrity: sha512-DBwtEWN2caHQ9/imiNeEA5ys1JoRtRfY3d7V9wkqtbycnAmTvRRmbHKDV4a0EYc678/dia0jrte4tjYwVBaZUA==}
     dev: false
 
   /lodash.isnumber/3.0.3:
-    resolution: {integrity: sha1-POdoEMWSjQM1IwGsKHMX8RwLH/w=}
+    resolution: {integrity: sha512-QYqzpfwO3/CWf3XP+Z+tkQsfaLL/EnUlXWVkIk5FUPc4sBdTehEqZONuyRt2P67PXAk+NXmTBcc97zw9t1FQrw==}
     dev: false
 
   /lodash.isplainobject/4.0.6:
-    resolution: {integrity: sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs=}
+    resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
     dev: false
 
   /lodash.isstring/4.0.1:
-    resolution: {integrity: sha1-1SfftUVuynzJu5XV2ur4i6VKVFE=}
+    resolution: {integrity: sha512-0wJxfxH1wgO3GrbuP+dTTk7op+6L41QCXbGINEmD+ny/G/eCqGzxyCsh7159S+mgDDcoarnBw6PC1PS5+wUGgw==}
     dev: false
 
   /lodash.memoize/4.1.2:
@@ -3958,7 +3958,7 @@ packages:
     dev: true
 
   /lodash.once/4.1.1:
-    resolution: {integrity: sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=}
+    resolution: {integrity: sha512-Sb487aTOCr9drQVL8pIxOzVhafOjZN9UU54hiN8PU3uAiSV7lx1yYNpbNmex2PK6dSJoNTSJUUswT651yww3Mg==}
     dev: false
 
   /lodash/4.17.21:
