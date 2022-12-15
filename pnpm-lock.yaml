@@ -26,7 +26,7 @@ specifiers:
   '@typescript-eslint/parser': 5.32.0
   bcrypt: 5.0.1
   class-transformer: 0.5.1
-  class-validator: 0.13.2
+  class-validator: 0.14.0
   eslint: 8.29.0
   eslint-config-prettier: 8.5.0
   eslint-plugin-prettier: 4.2.1
@@ -50,18 +50,18 @@ specifiers:
   typescript: 4.6.2
 
 dependencies:
-  '@nestjs/common': 9.0.11_5199533202e21c7185c9d97f881e2827
+  '@nestjs/common': 9.0.11_618077be2e38d495796479d044e14eca
   '@nestjs/config': 2.2.0_59de92f9fd864687249b3972c06ca399
   '@nestjs/core': 9.0.11_382bd8e23cadbcd4db628b637a6b5079
   '@nestjs/jwt': 9.0.0_@nestjs+common@9.0.11
-  '@nestjs/mapped-types': 1.0.1_2fdbab34b37fcd61241c769a15661dba
+  '@nestjs/mapped-types': 1.0.1_6c0d43e765f2a684c337477556791f97
   '@nestjs/passport': 9.0.0_831970cf43b4c9f2f2669630e07dc1ea
   '@nestjs/platform-express': 9.0.11_51e3e64fce4aee1b7c2eef4aa6ba87df
   '@nestjs/schedule': 2.1.0_2d5ef92cc47dcc64ecad64d6d3f04e8a
   '@nestjs/typeorm': 9.0.1_3156ea84a97223e9b8234fb7f93331ff
   bcrypt: 5.0.1
   class-transformer: 0.5.1
-  class-validator: 0.13.2
+  class-validator: 0.14.0
   faker: 5.5.3
   mysql2: 2.3.3
   passport: 0.6.0
@@ -906,7 +906,7 @@ packages:
       - webpack-cli
     dev: true
 
-  /@nestjs/common/9.0.11_5199533202e21c7185c9d97f881e2827:
+  /@nestjs/common/9.0.11_618077be2e38d495796479d044e14eca:
     resolution: {integrity: sha512-oYLIcOal3QOwcqt6goXovRNg8ZkalyOMjH0oYYzfJLrait6P7c6nAeWHu4qFDThY7GoZHEanLgji1qlqVEW09g==}
     peerDependencies:
       cache-manager: '*'
@@ -923,7 +923,7 @@ packages:
         optional: true
     dependencies:
       class-transformer: 0.5.1
-      class-validator: 0.13.2
+      class-validator: 0.14.0
       iterare: 1.2.1
       reflect-metadata: 0.1.13
       rxjs: 7.5.5
@@ -937,7 +937,7 @@ packages:
       reflect-metadata: ^0.1.13
       rxjs: ^6.0.0 || ^7.2.0
     dependencies:
-      '@nestjs/common': 9.0.11_5199533202e21c7185c9d97f881e2827
+      '@nestjs/common': 9.0.11_618077be2e38d495796479d044e14eca
       dotenv: 16.0.1
       dotenv-expand: 8.0.3
       lodash: 4.17.21
@@ -964,7 +964,7 @@ packages:
       '@nestjs/websockets':
         optional: true
     dependencies:
-      '@nestjs/common': 9.0.11_5199533202e21c7185c9d97f881e2827
+      '@nestjs/common': 9.0.11_618077be2e38d495796479d044e14eca
       '@nestjs/platform-express': 9.0.11_51e3e64fce4aee1b7c2eef4aa6ba87df
       '@nuxtjs/opencollective': 0.3.2
       fast-safe-stringify: 2.1.1
@@ -983,12 +983,12 @@ packages:
     peerDependencies:
       '@nestjs/common': ^8.0.0 || ^9.0.0
     dependencies:
-      '@nestjs/common': 9.0.11_5199533202e21c7185c9d97f881e2827
+      '@nestjs/common': 9.0.11_618077be2e38d495796479d044e14eca
       '@types/jsonwebtoken': 8.5.8
       jsonwebtoken: 8.5.1
     dev: false
 
-  /@nestjs/mapped-types/1.0.1_2fdbab34b37fcd61241c769a15661dba:
+  /@nestjs/mapped-types/1.0.1_6c0d43e765f2a684c337477556791f97:
     resolution: {integrity: sha512-NFvofzSinp00j5rzUd4tf+xi9od6383iY0JP7o0Bnu1fuItAUkWBgc4EKuIQ3D+c2QI3i9pG1kDWAeY27EMGtg==}
     peerDependencies:
       '@nestjs/common': ^7.0.8 || ^8.0.0
@@ -1001,9 +1001,9 @@ packages:
       class-validator:
         optional: true
     dependencies:
-      '@nestjs/common': 9.0.11_5199533202e21c7185c9d97f881e2827
+      '@nestjs/common': 9.0.11_618077be2e38d495796479d044e14eca
       class-transformer: 0.5.1
-      class-validator: 0.13.2
+      class-validator: 0.14.0
       reflect-metadata: 0.1.13
     dev: false
 
@@ -1013,7 +1013,7 @@ packages:
       '@nestjs/common': ^8.0.0 || ^9.0.0
       passport: ^0.4.0 || ^0.5.0 || ^0.6.0
     dependencies:
-      '@nestjs/common': 9.0.11_5199533202e21c7185c9d97f881e2827
+      '@nestjs/common': 9.0.11_618077be2e38d495796479d044e14eca
       passport: 0.6.0
     dev: false
 
@@ -1023,7 +1023,7 @@ packages:
       '@nestjs/common': ^9.0.0
       '@nestjs/core': ^9.0.0
     dependencies:
-      '@nestjs/common': 9.0.11_5199533202e21c7185c9d97f881e2827
+      '@nestjs/common': 9.0.11_618077be2e38d495796479d044e14eca
       '@nestjs/core': 9.0.11_382bd8e23cadbcd4db628b637a6b5079
       body-parser: 1.20.0
       cors: 2.8.5
@@ -1040,7 +1040,7 @@ packages:
       '@nestjs/core': ^7.0.0 || ^8.0.0 || ^9.0.0
       reflect-metadata: ^0.1.12
     dependencies:
-      '@nestjs/common': 9.0.11_5199533202e21c7185c9d97f881e2827
+      '@nestjs/common': 9.0.11_618077be2e38d495796479d044e14eca
       '@nestjs/core': 9.0.11_382bd8e23cadbcd4db628b637a6b5079
       cron: 2.0.0
       reflect-metadata: 0.1.13
@@ -1090,7 +1090,7 @@ packages:
       '@nestjs/platform-express':
         optional: true
     dependencies:
-      '@nestjs/common': 9.0.11_5199533202e21c7185c9d97f881e2827
+      '@nestjs/common': 9.0.11_618077be2e38d495796479d044e14eca
       '@nestjs/core': 9.0.11_382bd8e23cadbcd4db628b637a6b5079
       '@nestjs/platform-express': 9.0.11_51e3e64fce4aee1b7c2eef4aa6ba87df
       tslib: 2.4.0
@@ -1105,7 +1105,7 @@ packages:
       rxjs: ^7.2.0
       typeorm: ^0.3.0
     dependencies:
-      '@nestjs/common': 9.0.11_5199533202e21c7185c9d97f881e2827
+      '@nestjs/common': 9.0.11_618077be2e38d495796479d044e14eca
       '@nestjs/core': 9.0.11_382bd8e23cadbcd4db628b637a6b5079
       reflect-metadata: 0.1.13
       rxjs: 7.5.5
@@ -1392,6 +1392,9 @@ packages:
     dependencies:
       '@types/superagent': 4.1.15
     dev: true
+
+  /@types/validator/13.7.10:
+    resolution: {integrity: sha512-t1yxFAR2n0+VO6hd/FJ9F2uezAZVWHLmpmlJzm1eX03+H7+HsuTAp7L8QJs+2pQCfWkP1+EXsGK9Z9v7o/qPVQ==}
 
   /@types/yargs-parser/21.0.0:
     resolution: {integrity: sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==}
@@ -2108,10 +2111,11 @@ packages:
   /class-transformer/0.5.1:
     resolution: {integrity: sha512-SQa1Ws6hUbfC98vKGxZH3KFY0Y1lm5Zm0SY8XX9zbK7FJCyVEac3ATW0RIpwzW+oOfmHE5PMPufDG9hCfoEOMw==}
 
-  /class-validator/0.13.2:
-    resolution: {integrity: sha512-yBUcQy07FPlGzUjoLuUfIOXzgynnQPPruyK1Ge2B74k9ROwnle1E+NxLWnUv5OLU8hA/qL5leAE9XnXq3byaBw==}
+  /class-validator/0.14.0:
+    resolution: {integrity: sha512-ct3ltplN8I9fOwUd8GrP8UQixwff129BkEtuWDKL5W45cQuLd19xqmTLu5ge78YDm/fdje6FMt0hGOhl0lii3A==}
     dependencies:
-      libphonenumber-js: 1.9.49
+      '@types/validator': 13.7.10
+      libphonenumber-js: 1.10.15
       validator: 13.7.0
 
   /cli-cursor/3.1.0:
@@ -3899,8 +3903,8 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /libphonenumber-js/1.9.49:
-    resolution: {integrity: sha512-/wEOIONcVboFky+lWlCaF7glm1FhBz11M5PHeCApA+xDdVfmhKjHktHS8KjyGxouV5CSXIr4f3GvLSpJa4qMSg==}
+  /libphonenumber-js/1.10.15:
+    resolution: {integrity: sha512-sLeVLmWX17VCKKulc+aDIRHS95TxoTsKMRJi5s5gJdwlqNzMWcBCtSHHruVyXjqfi67daXM2SnLf2juSrdx5Sg==}
 
   /lines-and-columns/1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
