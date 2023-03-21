@@ -14,7 +14,7 @@ specifiers:
   '@nestjs/testing': 9.2.1
   '@nestjs/typeorm': 9.0.1
   '@types/bcrypt': 5.0.0
-  '@types/cron': 2.0.0
+  '@types/cron': 2.0.1
   '@types/express': 4.17.15
   '@types/faker': 5.5.9
   '@types/jest': 29.2.4
@@ -77,7 +77,7 @@ devDependencies:
   '@nestjs/schematics': 9.0.4_typescript@4.6.2
   '@nestjs/testing': 9.2.1_b0c352cae51db2bb0ca8c1f46c352be3
   '@types/bcrypt': 5.0.0
-  '@types/cron': 2.0.0
+  '@types/cron': 2.0.1
   '@types/express': 4.17.15
   '@types/faker': 5.5.9
   '@types/jest': 29.2.4
@@ -1230,8 +1230,8 @@ packages:
     resolution: {integrity: sha512-t73xJJrvdTjXrn4jLS9VSGRbz0nUY3cl2DMGDU48lKl+HR9dbbjW2A9r3g40VA++mQpy6uuHg33gy7du2BKpog==}
     dev: true
 
-  /@types/cron/2.0.0:
-    resolution: {integrity: sha512-xZM08fqvwIXgghtPVkSPKNgC+JoMQ2OHazEvyTKnNf7aWu1aB6/4lBbQFrb03Td2cUGG7ITzMv3mFYnMu6xRaQ==}
+  /@types/cron/2.0.1:
+    resolution: {integrity: sha512-WHa/1rtNtD2Q/H0+YTTZoty+/5rcE66iAFX2IY+JuUoOACsevYyFkSYu/2vdw+G5LrmO7Lxowrqm0av4k3qWNQ==}
     dependencies:
       '@types/luxon': 2.3.2
       '@types/node': 18.11.18
