@@ -43,7 +43,7 @@ specifiers:
   rxjs: 7.5.5
   supertest: 6.3.3
   ts-jest: 29.0.3
-  ts-loader: 9.4.2
+  ts-loader: 9.4.4
   ts-node: 10.7.0
   tsconfig-paths: 4.1.1
   typeorm: 0.3.11
@@ -95,7 +95,7 @@ devDependencies:
   prettier: 2.8.8
   supertest: 6.3.3
   ts-jest: 29.0.3_jest@29.3.1+typescript@4.9.5
-  ts-loader: 9.4.2_typescript@4.9.5
+  ts-loader: 9.4.4_typescript@4.9.5
   ts-node: 10.7.0_08ccfdaf59301cf71800ade926127531
   tsconfig-paths: 4.1.1
   typescript: 4.9.5
@@ -5233,8 +5233,8 @@ packages:
       yargs-parser: 21.1.1
     dev: true
 
-  /ts-loader/9.4.2_typescript@4.9.5:
-    resolution: {integrity: sha512-OmlC4WVmFv5I0PpaxYb+qGeGOdm5giHU7HwDDUjw59emP2UYMHy9fFSDcYgSNoH8sXcj4hGCSEhlDZ9ULeDraA==}
+  /ts-loader/9.4.4_typescript@4.9.5:
+    resolution: {integrity: sha512-MLukxDHBl8OJ5Dk3y69IsKVFRA/6MwzEqBgh+OXMPB/OD01KQuWPFd1WAQP8a5PeSCAxfnkhiuWqfmFJzJQt9w==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       typescript: '*'
@@ -5243,7 +5243,7 @@ packages:
       chalk: 4.1.2
       enhanced-resolve: 5.10.0
       micromatch: 4.0.4
-      semver: 7.3.7
+      semver: 7.3.8
       typescript: 4.9.5
     dev: true
 
