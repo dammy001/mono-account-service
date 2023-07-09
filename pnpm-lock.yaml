@@ -9,7 +9,7 @@ specifiers:
   '@nestjs/mapped-types': '*'
   '@nestjs/passport': 9.0.0
   '@nestjs/platform-express': 9.2.1
-  '@nestjs/schedule': 2.1.0
+  '@nestjs/schedule': 2.2.3
   '@nestjs/schematics': 9.0.4
   '@nestjs/testing': 9.2.1
   '@nestjs/typeorm': 9.0.1
@@ -57,7 +57,7 @@ dependencies:
   '@nestjs/mapped-types': 1.0.1_22537f43f426f4116b80fc8927a5e2c5
   '@nestjs/passport': 9.0.0_f3b9f418ab069e9fe327f80cfabe7350
   '@nestjs/platform-express': 9.2.1_3a4507b80408e3f30ddd3985ad1e6709
-  '@nestjs/schedule': 2.1.0_1b662dd2105372e1d309726921cbaa58
+  '@nestjs/schedule': 2.2.3_1b662dd2105372e1d309726921cbaa58
   '@nestjs/typeorm': 9.0.1_19e27dc5f0f781fcacdc34396ddb9f80
   bcrypt: 5.1.0
   class-transformer: 0.5.1
@@ -1041,8 +1041,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@nestjs/schedule/2.1.0_1b662dd2105372e1d309726921cbaa58:
-    resolution: {integrity: sha512-4Xaw56WiW3VsxEPPnj/iDtfjcO+sUZyYAeRxD0gnF5havncxjAnv52Iw7UH3DuzzUA784xPGgGje3Fq0Gu925g==}
+  /@nestjs/schedule/2.2.3_1b662dd2105372e1d309726921cbaa58:
+    resolution: {integrity: sha512-PxoGdoBwZQ6SzGfFcERTk7mDxrmesNt2cfqKgtLsFpjYNpV6ZYlKw9Ku8C0ZIjdhy0tBbysj+Fsi3sYua6o6Eg==}
     peerDependencies:
       '@nestjs/common': ^7.0.0 || ^8.0.0 || ^9.0.0
       '@nestjs/core': ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -1050,9 +1050,9 @@ packages:
     dependencies:
       '@nestjs/common': 9.2.1_618077be2e38d495796479d044e14eca
       '@nestjs/core': 9.2.1_ea5ab8987d403b0449dff0b4fd0616ba
-      cron: 2.0.0
+      cron: 2.3.1
       reflect-metadata: 0.1.13
-      uuid: 8.3.2
+      uuid: 9.0.0
     dev: false
 
   /@nestjs/schematics/9.0.4_chokidar@3.5.3+typescript@4.8.4:
@@ -2327,10 +2327,10 @@ packages:
   /create-require/1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
 
-  /cron/2.0.0:
-    resolution: {integrity: sha512-RPeRunBCFr/WEo7WLp8Jnm45F/ziGJiHVvVQEBSDTSGu6uHW49b2FOP2O14DcXlGJRLhwE7TIoDzHHK4KmlL6g==}
+  /cron/2.3.1:
+    resolution: {integrity: sha512-1eRRlIT0UfIqauwbG9pkg3J6CX9A6My2ytJWqAXoK0T9oJnUZTzGBNPxao0zjodIbPgf8UQWjE62BMb9eVllSQ==}
     dependencies:
-      luxon: 1.28.0
+      luxon: 3.3.0
     dev: false
 
   /cross-spawn/7.0.3:
@@ -4098,8 +4098,9 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /luxon/1.28.0:
-    resolution: {integrity: sha512-TfTiyvZhwBYM/7QdAVDh+7dBTBA29v4ik0Ce9zda3Mnf8on1S5KJI8P2jKFZ8+5C0jhmr0KwJEO/Wdpm0VeWJQ==}
+  /luxon/3.3.0:
+    resolution: {integrity: sha512-An0UCfG/rSiqtAIiBPO0Y9/zAnHUZxAMiCpTd5h2smgsj7GGmcenvrvww2cqNA8/4A5ZrD1gJpHN2mIHZQF+Mg==}
+    engines: {node: '>=12'}
     dev: false
 
   /macos-release/2.5.0:
